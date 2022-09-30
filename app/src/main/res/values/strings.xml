@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_highlighted_label">Shoes Online Market</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_button_label">Log in</string>
+    <string name="login_signup_button_label">Join Now</string>
+
+    <string name="login_email_error_message">Please Enter valid email</string>
+    <string name="login_password_error_message">Please Enter valid password (length should not be less than 6 characters or numbers)</string>
+
+
+    <string name="instructions_screen_label_one">* welcome to Shoes Market App, all what you need can be ordered while you are at home, just give us required info for your needs, and the order will be received on 2–4 business days</string>
+    <string name="instructions_screen_label_two">* first you need to add shoes Info, but click at plus button at home screen</string>
+    <string name="instructions_screen_label_three">* Then you will have to add required data for your shoes, and click save</string>
+    <string name="instructions_screen_label_four">* you will be redirected to home screen that list all shoes Orders, and you will receive a notification once the order on it\'s way to your home</string>
+    <string name="instructions_screen_label_five">* An Exclusive Offers for your first two order, and Gift card from Amazon with 100$ </string>
+
+    <string name="instructions_check_now_button">Check Now</string>
+
+    <string name="shoe_name">Shoes Name: </string>
+    <string name="shoe_company_name">Company: </string>
+    <string name="shoe_size">Size: </string>
+
+    <string name="shoe_name_hint">Shoes Name</string>
+    <string name="shoe_company_name_hint">Company</string>
+    <string name="shoe_size_hint">Size</string>
+    <string name="shoe_description_hint">Description</string>
+    <string name="shoe_save_order_button">Save Shoe Order</string>
+
+    <string name="shoe_name_validation_error">* please enter valid name</string>
+    <string name="shoe_company_validation_error">* please enter valid company name</string>
+    <string name="shoe_size_validation_error">* please enter valid size</string>
+    <string name="shoe_description_validation_error">* please enter valid description</string>
+
+</resources>

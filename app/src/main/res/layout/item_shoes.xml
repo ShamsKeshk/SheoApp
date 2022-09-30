@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <data>
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:cardElevation="8dp"
+        android:elevation="8dp"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="10dp"
+        android:padding="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp">
+
+            <TextView
+                android:id="@+id/tv_shoes_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shoe_name"
+                style="@style/label_shoe_item"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_shoes_name_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@{shoe.name}"
+                style="@style/label_shoe_item"
+                app:layout_constraintStart_toEndOf="@+id/tv_shoes_name_label"
+                app:layout_constraintTop_toTopOf="@+id/tv_shoes_name_label" />
+
+            <TextView
+                android:id="@+id/tv_company_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shoe_company_name"
+                style="@style/label_shoe_item"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_shoes_name_label" />
+            <TextView
+                android:id="@+id/tv_company_name_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{shoe.company}"
+                style="@style/label_shoe_item"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toEndOf="@+id/tv_company_name_label"
+                app:layout_constraintTop_toTopOf="@+id/tv_company_name_label" />
+
+            <TextView
+                android:id="@+id/tv_shoes_size_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                style="@style/label_shoe_item"
+                android:text="@string/shoe_size"
+                app:layout_constraintEnd_toStartOf="@+id/tv_shoes_size_value"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/tv_shoes_size_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{shoe.size.toString()}"
+                style="@style/label_shoe_item"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_shoes_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{shoe.description}"
+                style="@style/label_shoe_item"
+                app:layout_constraintTop_toBottomOf="@+id/tv_company_name_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

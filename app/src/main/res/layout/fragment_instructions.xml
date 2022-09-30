@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.InstructionsFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/label_instructions_Style"
+        android:text="@string/instructions_screen_label_one" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/label_instructions_Style"
+        android:text="@string/instructions_screen_label_two" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/label_instructions_Style"
+        android:text="@string/instructions_screen_label_three" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/label_instructions_Style"
+        android:text="@string/instructions_screen_label_four" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/label_instructions_Style"
+        android:text="@string/instructions_screen_label_five" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_add_shoe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="22dp"
+        android:text="@string/instructions_check_now_button" />
+
+</LinearLayout>
+
+</layout>

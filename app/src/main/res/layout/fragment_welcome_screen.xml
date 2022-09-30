@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.WelcomeScreenFragment">
+
+    <TextView
+        android:id="@+id/tv_welcome_screen_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="28dp"
+        android:text="Welcome To Shoes App, all what you need now in your hand"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/tv_offers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:textSize="18dp"
+        android:text="Exclusive Offers for your first 2 Orders! Can't wait? Check the Instructions to Get it"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/tv_welcome_screen_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_check_instructions"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_check_instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check Instructions Now"
+        android:layout_marginHorizontal="28dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_offers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
