@@ -10,6 +10,7 @@
         <entry key="app/src/main/res/layout/fragment_shoes_list.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_welcome_screen.xml" value="0.18840579710144928" />
         <entry key="app/src/main/res/layout/item_shoes.xml" value="0.415625" />
+        <entry key="app/src/main/res/menu/menu_shoe_list.xml" value="0.25" />
       </map>
     </option>
   </component>

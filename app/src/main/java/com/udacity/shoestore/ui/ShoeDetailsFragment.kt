@@ -30,20 +30,23 @@ class ShoeDetailsFragment : Fragment() {
         binding.btnSaveShoeOrder.setOnClickListener{
 
             if (isValidateData()){
-                Shoe().apply {
-                    name = getShoeName()
-                    size = getShoeSize().toDouble()
-                    company = getShoeCompany()
-                    description = getShoeDescription()
-                }.apply {
+                getShoeToAdd().apply {
                     shoeViewModel.addShoe(shoe = this)
                     it.findNavController().navigate(ShoeDetailsFragmentDirections.actionShoeDetailsFragmentToShoesListFragment())
                 }
             }
-
         }
 
         return binding.root
+    }
+
+    private fun getShoeToAdd(): Shoe{
+        return Shoe().apply {
+            name = getShoeName()
+            size = getShoeSize().toDouble()
+            company = getShoeCompany()
+            description = getShoeDescription()
+        }
     }
 
     private fun isValidateData(): Boolean{

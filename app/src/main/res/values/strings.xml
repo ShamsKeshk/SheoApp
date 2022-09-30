@@ -11,6 +11,7 @@
     <string name="login_email_error_message">Please Enter valid email</string>
     <string name="login_password_error_message">Please Enter valid password (length should not be less than 6 characters or numbers)</string>
 
+    <string name="menu_logout_label">Log out</string>
 
     <string name="instructions_screen_label_one">* welcome to Shoes Market App, all what you need can be ordered while you are at home, just give us required info for your needs, and the order will be received on 2–4 business days</string>
     <string name="instructions_screen_label_two">* first you need to add shoes Info, but click at plus button at home screen</string>
@@ -19,6 +20,9 @@
     <string name="instructions_screen_label_five">* An Exclusive Offers for your first two order, and Gift card from Amazon with 100$ </string>
 
     <string name="instructions_check_now_button">Check Now</string>
+    <string name="instructions_check_button">Check Instructions Now</string>
+    <string name="welcome_Screen_offer_label">Exclusive Offers for your first 2 Orders! Can\'t wait? Check the Instructions to Get it</string>
+    <string name="welcome_Screen_header_label">Welcome To Shoes App, all what you need now in your hand</string>
 
     <string name="shoe_name">Shoes Name: </string>
     <string name="shoe_company_name">Company: </string>
