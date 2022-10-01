@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
-import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeDetailsBinding
 import com.udacity.shoestore.viewmodel.ShoeViewModel
 import kotlinx.android.synthetic.main.fragment_shoe_details.*
@@ -30,9 +29,9 @@ class ShoeDetailsFragment : Fragment() {
 
         binding.btnSaveShoeOrder.setOnClickListener{
 
-            shoeViewModel.isShouldValidateFields = true
+            shoeViewModel.isShouldValidateFields.value = true
 
-            if (isValidateData()){
+            if (shoeViewModel.isNewShoeDataValid()){
                 shoeViewModel.newAddedShoe.apply {
                     shoeViewModel.addShoe(shoe = this)
                     it.findNavController().navigate(ShoeDetailsFragmentDirections.actionShoeDetailsFragmentToShoesListFragment())
@@ -43,47 +42,8 @@ class ShoeDetailsFragment : Fragment() {
         return binding.root
     }
 
-    private fun isValidateData(): Boolean{
-        clearErrorState()
-        var isDataValid = true
-
-        shoeViewModel.newAddedShoe.let {
-            if (!shoeViewModel.isValidData(it.name)){
-                binding.tilName.isErrorEnabled = true
-                binding.tilName.error = getString(R.string.shoe_name_validation_error)
-
-                isDataValid = false
-            }
-
-            if (!shoeViewModel.isValidData(it.company)){
-                binding.tilCompanyName.isErrorEnabled = true
-                binding.tilCompanyName.error = getString(R.string.shoe_company_validation_error)
-                isDataValid = false
-            }
-
-            if (!shoeViewModel.isValidData(it.size)){
-                binding.tilShoeSize.isErrorEnabled = true
-                binding.tilShoeSize.error = getString(R.string.shoe_size_validation_error)
-
-                isDataValid = false
-            }
-
-            if (!shoeViewModel.isValidData(it.description)){
-                binding.tilShoeDescription.isErrorEnabled = true
-                binding.tilShoeDescription.error = getString(R.string.shoe_description_validation_error)
-
-                isDataValid = false
-            }
-
-            return isDataValid
-        }
+    override fun onDestroy() {
+        super.onDestroy()
+        shoeViewModel.clearAddingShoeSession()
     }
-
-    private fun clearErrorState(){
-        binding.tilName.isErrorEnabled = false
-        binding.tilCompanyName.isErrorEnabled = false
-        binding.tilShoeSize.isErrorEnabled = false
-        binding.tilShoeDescription.isErrorEnabled = false
-    }
-
 }

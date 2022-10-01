@@ -21,6 +21,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/shoe_name_hint"
+        app:errorMessage="@{@string/shoe_name_validation_error}"
+        app:shouldDisplayError="@{vm.shouldValidateFields &amp;&amp; !vm.isValidData(vm.newAddedShoe.name)}"
         style="@style/text_input_layout_style">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -37,6 +39,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/shoe_company_name_hint"
+        app:errorMessage="@{@string/shoe_company_validation_error}"
+        app:shouldDisplayError="@{vm.shouldValidateFields &amp;&amp; !vm.isValidData(vm.newAddedShoe.company)}"
         style="@style/text_input_layout_style">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -53,6 +57,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/shoe_size_hint"
+        app:errorMessage="@{@string/shoe_size_validation_error}"
+        app:shouldDisplayError="@{vm.shouldValidateFields &amp;&amp; !vm.isValidData(vm.newAddedShoe.size)}"
         style="@style/text_input_layout_style">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -70,6 +76,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/shoe_description_hint"
+        app:errorMessage="@{@string/shoe_description_validation_error}"
+        app:shouldDisplayError="@{vm.shouldValidateFields &amp;&amp; !vm.isValidData(vm.newAddedShoe.description)}"
         style="@style/text_input_layout_style">
 
         <com.google.android.material.textfield.TextInputEditText

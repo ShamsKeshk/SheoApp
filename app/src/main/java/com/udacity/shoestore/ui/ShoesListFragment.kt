@@ -35,14 +35,11 @@ class ShoesListFragment : Fragment() {
     }
 
     private fun initShoeObserver(){
-        shoeViewModel.getShoeLiveData().observe(viewLifecycleOwner, Observer { it ->
-            if (!shoeViewModel.isShouldUpdateView())
-                return@Observer
-
+        shoeViewModel.getShoeLiveData().observe(viewLifecycleOwner) {
             it?.forEach { shoe ->
                 binding.llShoesList.addView(getViewForShoe(shoe))
             }
-        })
+        }
     }
 
 
