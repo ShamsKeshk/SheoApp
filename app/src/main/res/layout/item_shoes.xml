@@ -9,6 +9,9 @@
             type="com.udacity.shoestore.models.Shoe" />
     </data>
 
+    <!-- sure here we will use constraints to draw flat layer for better performance, as this item always have different positions for each part, like image can be added later at the start of card, then some data should be next to this image, and some data is have a constrain with those views,
+     so this card is complex and incase we use linear will not fit our needs also will add a nested layers which will affect our GPU performance and may have overDraw x3
+     -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

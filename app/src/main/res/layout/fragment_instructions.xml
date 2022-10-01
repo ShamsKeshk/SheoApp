@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
+
+    <!--Here we are using Linear Layout as all views are listed on vertical order, no complexity or relative views found, so the linear layout is most fit for this screen -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"

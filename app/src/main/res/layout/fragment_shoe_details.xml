@@ -7,7 +7,9 @@
             type="com.udacity.shoestore.viewmodel.ShoeViewModel" />
     </data>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <!--Here we are using Linear Layout as all inputFields are listed on vertical order, no complexity or relative views found, so the linear layout is most fit for this screen -->
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -24,7 +26,9 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:onTextChanged="@{(text,start,before,count) -> vm.newAddedShoe.setName(text.toString())}"
+            android:text="@{vm.newAddedShoe.name}"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -38,7 +42,9 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_company_name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="@{vm.newAddedShoe.company}"
+            android:onTextChanged="@{(text,start,before,count) -> vm.newAddedShoe.setCompany(text.toString())}"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -53,6 +59,8 @@
             android:id="@+id/et_shoe_size"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="@{vm.newAddedShoe.size.toString()}"
+            android:onTextChanged="@{(text,start,before,count) -> vm.newAddedShoe.setSize(text.toString())}"
             android:inputType="numberDecimal"/>
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -69,6 +77,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="start|top"
+            android:text="@{vm.newAddedShoe.description}"
+            android:onTextChanged="@{(text,start,before,count) -> vm.newAddedShoe.setDescription(text.toString())}"
             android:lines="3" />
 
     </com.google.android.material.textfield.TextInputLayout>

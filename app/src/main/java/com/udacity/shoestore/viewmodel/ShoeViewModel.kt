@@ -1,14 +1,23 @@
 package com.udacity.shoestore.viewmodel
 
+import androidx.databinding.ObservableField
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.udacity.shoestore.BR
 import com.udacity.shoestore.models.Shoe
+
 
 class ShoeViewModel: ViewModel() {
 
+    var isShouldValidateFields: Boolean = false
+
     private val _shoeItemLiveData = MutableLiveData<MutableList<Shoe>?>(mutableListOf())
     private val _isHaveNewData = MutableLiveData<Boolean>(false)
+
+    val newAddedShoe by lazy {
+        Shoe()
+    }
 
     fun addShoe(shoe: Shoe){
         _isHaveNewData.value = true

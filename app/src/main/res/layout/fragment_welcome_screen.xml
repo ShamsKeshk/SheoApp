@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- This Welcome Screen is using ConstraintLayout, as it's should have a lot if information like images, slider,
+    and regarding it's complexity ConstraintLayout will most fit for it,
+     also for current state we need to control each view with it's constraint and margin, and some views need bias
+     but in linearLayout will need to add weight to control such positions, als will need refactor later in-case we use linear as this screen behavior should have complex structure-->
+
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"

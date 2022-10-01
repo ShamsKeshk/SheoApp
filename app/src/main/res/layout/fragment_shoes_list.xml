@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
 
+    <!-- Here we are using Constraint layout as we have some relative views like FloatingActionButton,
+    that need to be displayed over scrollView at the bottom|end of screen, it can be handled using frameLayout,
+     but later we can add filter and sort by section later, so as we use constraint layout we will not need to refactor the viewGroup
+     -->
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
