@@ -29,6 +29,7 @@ class ShoesListFragment : Fragment() {
         }
 
         setMenuVisibility(true)
+        setHasOptionsMenu(true)
 
         initShoeObserver()
         return binding.root
